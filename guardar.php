@@ -63,7 +63,7 @@ try {
 
     unset($_SESSION['csrf_token']); // Se renueva el token tras un registro exitoso.
     mensajeFlash('exito', 'Estudiante registrado correctamente.');
-    header('Location: index.php');
+    header('Location: listar.php');
     exit;
 } catch (PDOException $e) {
     // 23000 = violación de restricción (cédula o correo repetidos).
