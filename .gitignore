@@ -1,0 +1,31 @@
+# ==========================================================
+# .gitignore - Proyecto PHP / XAMPP
+# ==========================================================
+
+# Credenciales y variables de entorno (nunca se suben)
+.env
+.env.*
+config/config.local.php
+
+# Registros de errores y archivos temporales
+logs/*
+!logs/.gitkeep
+*.log
+*.tmp
+*.cache
+
+# Dependencias de Composer (se instalan con "composer install")
+/vendor/
+
+# Copias de seguridad de la base de datos con datos reales
+*.sql.gz
+*.bak
+database/backups/
+
+# Archivos del editor y del sistema operativo
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
