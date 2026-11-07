@@ -1,0 +1,91 @@
+/* =========================================================
+   Sistema de Registro de Estudiantes - Hoja de estilos
+   Autora: Genesis Espinoza
+   ========================================================= */
+
+:root {
+    --azul-marino: #14294a;
+    --azul: #2e6497;
+    --azul-claro: #508dc6;
+    --fondo: #f4f7fb;
+    --blanco: #ffffff;
+    --texto: #1f2937;
+    --suave: #5b6b7f;
+    --borde: #d6e0ec;
+    --error: #b42318;
+    --error-fondo: #fef3f2;
+    --exito: #067647;
+    --exito-fondo: #ecfdf3;
+    --fuente: "Segoe UI", Roboto, Arial, sans-serif;
+    --radio: 12px;
+    --sombra: 0 8px 24px rgba(20, 41, 74, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente);
+    color: var(--texto);
+    background-color: var(--fondo);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+    background: linear-gradient(120deg, var(--azul-marino) 0%, var(--azul) 70%, var(--azul-claro) 100%);
+    color: var(--blanco);
+    padding: 1.4rem 0;
+}
+
+.encabezado__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.encabezado__marca {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.encabezado__titulo {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.pie {
+    background-color: var(--azul-marino);
+    color: #c9d6e5;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.principal {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+/* ---------- Diseño adaptable ---------- */
+@media (max-width: 720px) {
+    .encabezado__titulo {
+        font-size: 1.4rem;
+    }
+}
