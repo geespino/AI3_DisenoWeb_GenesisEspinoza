@@ -232,6 +232,74 @@ body {
     background-color: #d6e0ec;
 }
 
+/* ---------- Listado ---------- */
+.panel__cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contador {
+    background-color: #e6edf5;
+    color: var(--azul-marino);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+}
+
+.busqueda {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.busqueda .campo__control {
+    flex: 1;
+}
+
+.vacio {
+    text-align: center;
+    color: var(--suave);
+    padding: 2rem 0;
+}
+
+.tabla-responsiva {
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla th {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+    text-align: left;
+    padding: 0.75rem 0.8rem;
+    white-space: nowrap;
+}
+
+.tabla td {
+    padding: 0.7rem 0.8rem;
+    border-top: 1px solid var(--borde);
+    vertical-align: top;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background-color: #f8fafd;
+}
+
+.tabla tbody tr:hover {
+    background-color: #eef4fb;
+}
+
 /* ---------- Diseño adaptable ---------- */
 @media (max-width: 720px) {
     .encabezado__titulo {
@@ -245,5 +313,41 @@ body {
     .formulario__acciones .boton {
         flex: 1;
         justify-content: center;
+    }
+
+    .busqueda {
+        flex-wrap: wrap;
+    }
+
+    /* La tabla se convierte en tarjetas en pantallas pequeñas */
+    .tabla thead {
+        display: none;
+    }
+
+    .tabla,
+    .tabla tbody,
+    .tabla tr,
+    .tabla td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla tr {
+        border-top: 1px solid var(--borde);
+        padding: 0.5rem 0;
+    }
+
+    .tabla td {
+        border: none;
+        padding: 0.3rem 0.9rem;
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .tabla td::before {
+        content: attr(data-titulo);
+        font-weight: 600;
+        color: var(--azul-marino);
+        min-width: 90px;
     }
 }
