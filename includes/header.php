@@ -19,6 +19,7 @@
             </div>
             <nav class="menu" aria-label="Menú principal">
                 <a class="menu__enlace <?= $paginaActiva === 'registro' ? 'menu__enlace--activo' : '' ?>" href="index.php">Registrar</a>
+                <a class="menu__enlace <?= $paginaActiva === 'listado' ? 'menu__enlace--activo' : '' ?>" href="listar.php">Estudiantes</a>
             </nav>
         </div>
     </header>
